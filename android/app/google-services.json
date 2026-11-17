@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1025807762390",
+    "project_id": "projectraf-a8d78",
+    "storage_bucket": "projectraf-a8d78.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025807762390:android:a51e222c544f7476cb1a77",
+        "android_client_info": {
+          "package_name": "com.example.mobile8"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLSOYWwB5sFhdelUSayBfJyKLM4rJ3TeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025807762390:android:f4077a18214790d3cb1a77",
+        "android_client_info": {
+          "package_name": "example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLSOYWwB5sFhdelUSayBfJyKLM4rJ3TeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
