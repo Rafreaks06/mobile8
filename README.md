@@ -1,4 +1,4 @@
-# mobile8
+git -c credential.helper= push -u origin main# mobile8
 
 A new Flutter project.
 
