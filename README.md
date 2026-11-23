@@ -1,17 +1,36 @@
-git -c credential.helper= push -u origin main# mobile8
+# mobile8
 
-A new Flutter project.
+Aplikasi Flutter sederhana dengan autentikasi Firebase (Firebase Auth).
 
-## Getting Started
+## Fitur
 
-This project is a starting point for a Flutter application.
+- Login dengan email dan password (Firebase Authentication)
+- Deteksi status login otomatis (StreamBuilder `authStateChanges`)
+- Halaman info user: UID, email, status verifikasi email, terakhir login
+- Logout
 
-A few resources to get you started if this is your first Flutter project:
+## Struktur
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+```
+lib/
+  main.dart               # inisialisasi Firebase, home: AuthWrapper
+  firebase_options.dart   # konfigurasi Firebase (projectraf)
+  widgets/
+    auth_wrapper.dart     # StreamBuilder authStateChanges
+  screens/
+    login_screen.dart     # form login email/password
+    user_info_screen.dart # dashboard user + logout
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Cara Menjalankan
+
+```bash
+git pull
+flutter pub get
+flutter run
+```
+
+## Catatan
+
+- Form login (`login_screen.dart` bagian `build`) direkonstruksi dari field state di screenshot — periksa kembali tampilannya.
+- Login hanya berfungsi bila akun sudah terdaftar di Firebase Authentication (tidak ada alur daftar di aplikasi ini).
