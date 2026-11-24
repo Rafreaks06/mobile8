@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
 import 'widgets/auth_wrapper.dart';
+import 'firebase_messaging.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

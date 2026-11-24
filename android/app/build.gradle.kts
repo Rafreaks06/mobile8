@@ -9,7 +9,7 @@ plugins {
 
 android {
     namespace = "com.example.mobile8"
-    compileSdk = flutter_local_notifications membutuhkan SDK 37
+    compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
