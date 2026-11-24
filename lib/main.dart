@@ -2,7 +2,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
 import 'widgets/auth_wrapper.dart';
-import 'firebase_messaging.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:mobile8/notification_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,8 +13,10 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   // await Firebase.initializeApp();
-
+  FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
   runApp(const MyApp());
+  await NotificationService.init();
+
 }
 
 class MyApp extends StatelessWidget {
@@ -23,6 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Firebase Auth Simple',
+      navigatorKey: navigatorKey, // Kunci global Navigator
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

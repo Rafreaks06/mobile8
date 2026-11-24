@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile8/fcm_token.card.dart';
 
 class UserInfoScreen extends StatelessWidget {
   final User user;
@@ -52,6 +53,8 @@ class UserInfoScreen extends StatelessWidget {
                       Text('Email Terverifikasi: ${user.emailVerified ? "Ya" : "Tidak"}'),
                       const SizedBox(height: 8),
                       Text('Terakhir Login: ${user.metadata.lastSignInTime.toString()}'),
+                      const SizedBox(height: 16),
+                      const FcmTokenCard(), // Menampilkan FCM Token
                     ],
                   ),
                 ),
