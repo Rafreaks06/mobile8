@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'firebase_options.dart';
 import 'widgets/auth_wrapper.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:mobile8/notification_service.dart';
+import 'notification_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

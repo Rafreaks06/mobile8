@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:mobile8/fcm_token.card.dart';
+import 'package:mobile8/fcm_token_card.dart';
 
 class UserInfoScreen extends StatelessWidget {
   final User user;
