@@ -26,6 +26,13 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
     });
   }
 
+  Future<void> _unsubscribe() async {
+    await FirebaseMessaging.instance.unsubscribeFromTopic('kelas');
+    setState(() {
+      _isSubscribed = false;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,9 +88,19 @@ class _UserInfoScreenState extends State<UserInfoScreen> {
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: 8),
-                ElevatedButton(
-                  onPressed: _subscribe,
-                  child: const Text('Subscribe Topic Kelas'),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: _subscribe,
+                      child: const Text('Subscribe Topic Kelas'),
+                    ),
+                    const SizedBox(width: 8),
+                    OutlinedButton(
+                      onPressed: _unsubscribe,
+                      child: const Text('Unsubscribe Topic Kelas'),
+                    ),
+                  ],
                 ),
               ],
             ),
