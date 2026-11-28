@@ -29,10 +29,11 @@
         <select name="target_type">
             <option value="token" {% if form.target_type == 'token' %}selected{% endif %}>Satu device (FCM Token)</option>
             <option value="topic" {% if form.target_type == 'topic' %}selected{% endif %}>Topic (semua device yang subscribe)</option>
+            <option value="uid" {% if form.target_type == 'uid' %}selected{% endif %}>Berdasarkan UID (ambil token dari Firestore)</option>
         </select>
 
-        <label>FCM Token / Nama Topic</label>
-        <textarea name="target" required placeholder="Tempel FCM token, atau tulis: kelas">{{ form.target }}</textarea>
+        <label>FCM Token / Nama Topic / UID</label>
+        <textarea name="target" required placeholder="Tempel FCM token, tulis: kelas, atau UID user">{{ form.target }}</textarea>
 
         <label>Judul</label>
         <input name="title" required value="{{ form.title }}">

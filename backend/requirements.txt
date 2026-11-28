@@ -2,3 +2,4 @@ flask>=3.0
 google-auth>=2.0
 requests>=2.31
 waitress>=3.0
+firebase-admin>=6.0
